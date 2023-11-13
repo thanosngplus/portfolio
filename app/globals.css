@@ -25,3 +25,8 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+svg {
+  height: 100px;
+  width: 100px;
+}
