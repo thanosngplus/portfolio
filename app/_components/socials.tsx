@@ -31,7 +31,6 @@ export default function Socials() {
         <div>
           <a
             className="tap-highlight-transparent no-underline hover:opacity-80 active:opacity-disabled transition-opacity z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-unit-4 h-unit-10 text-small gap-unit-2 [&amp;>svg]:max-w-[theme(spacing.unit-8)] data-[pressed=true]:scale-[0.97] transition-transform-colors motion-reduce:transition-none bg-danger text-danger-foreground !w-10 !h-10 min-w-10 !p-0 rounded-full"
-
             aria-label="Go to my LinkedIn"
             role="button"
             href="https://www.linkedin.com/in/thanosades/"

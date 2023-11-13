@@ -13,7 +13,10 @@ export default function PortfolioProject({ project }: { project: Project }) {
   } = project;
 
   topics = topics?.filter((topic) => topic !== "portfolio-project");
-  const buttonTagsStyles = "bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded-md";
+  const tagsStyle =
+    "bg-slate-500 hover:bg-slate-700 text-white font-bold p-1 text-sm rounded-md";
+  const buttonStyle =
+    "bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded-md";
 
   return (
     <div className="flex flex-col justify-between gap-4 bg-slate-800 rounded-md border-4 border-white-500">
@@ -38,23 +41,24 @@ export default function PortfolioProject({ project }: { project: Project }) {
       <p>{description}</p>
       <ul className="flex flex-row gap-2 p-2 flex-wrap">
         {topics?.map((topic) => (
-          <li
-            key={topic}
-            className={buttonTagsStyles}
-          >
+          <li key={topic} className={tagsStyle}>
             {topic === "portfolio-project" ? null : topic}
           </li>
         ))}
       </ul>
       <div className="flex flex-row justify-between p-2">
         {githubUrl !== undefined && (
-          <button className={buttonTagsStyles}>
-            <Link href={githubUrl}>Github</Link>
+          <button className={buttonStyle}>
+            <Link href={githubUrl} target="_blank">
+              Github
+            </Link>
           </button>
         )}
-        {(homepage !== undefined && homepage !== "") && (
-          <button className={buttonTagsStyles}>
-            <Link href={homepage}>Live</Link>
+        {homepage !== undefined && homepage !== "" && (
+          <button className={buttonStyle}>
+            <Link href={homepage} target="_blank">
+              Live
+            </Link>
           </button>
         )}
       </div>

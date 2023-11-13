@@ -2,7 +2,9 @@ import PortfolioProject from "./portfolio-project";
 import { Project } from "@/app/types";
 
 async function getProjects(): Promise<Project[]> {
-  const res = await fetch(`https://api.github.com/users/thanosngplus/repos`, { next: { revalidate: 60 }});
+  const res = await fetch(`https://api.github.com/users/thanosngplus/repos`, {
+    next: { revalidate: 60 },
+  });
   if (!res.ok) {
     throw new Error("Failed to fetch github data");
   }
@@ -19,7 +21,15 @@ export default async function Portfolio() {
     description: "A map for the coordination of reforestation after wildfires.",
     homepage: "https://treeads.app.squaredev.io/",
     image: "/projects/treeads.webp",
-    topics: ["typescript", "react", "nextjs", "python", "fastapi", "mongodb", "google earth engine"]
+    topics: [
+      "typescript",
+      "react",
+      "nextjs",
+      "python",
+      "fastapi",
+      "mongodb",
+      "google earth engine",
+    ],
   };
 
   return (

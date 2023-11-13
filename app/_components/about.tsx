@@ -5,9 +5,11 @@ export default function About() {
       <div>
         <p>
           I decided to dedicate my life to the pursuit of excellence in the
-          field of software development. I consider myself product-oriented
-          because I want the software I work on to be useful, performant, and
-          scalable.
+          field of software development.
+        </p>
+        <p>
+          I consider myself product-oriented because I want the software I work
+          on to be useful, performant, and scalable.
         </p>
         <p>
           What I love in software development is the never-ending learning that

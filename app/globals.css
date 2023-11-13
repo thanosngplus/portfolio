@@ -45,6 +45,10 @@ h3 {
   font-size: 2vw;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 3vh;
+  font-weight: 800;
+  font-variant: small-caps;
 }
