@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Project } from "@/app/types";
 import Image from "next/image";
-// https://nextjs.org/docs/pages/api-reference/components/image#sizes
 
 export default function PortfolioProject({ project }: { project: Project }) {
   let {
@@ -27,6 +26,7 @@ export default function PortfolioProject({ project }: { project: Project }) {
             src={image}
             alt={`Picture of ${name} project`}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             style={{
               objectFit: "contain",
             }}

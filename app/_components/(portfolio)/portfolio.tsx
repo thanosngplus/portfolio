@@ -16,7 +16,7 @@ export default async function Portfolio() {
   const treeads: Project = {
     id: 1,
     name: "treeads",
-    description: "A map for the coordination of reforestation after wildfires",
+    description: "A map for the coordination of reforestation after wildfires.",
     homepage: "https://treeads.app.squaredev.io/",
     image: "/projects/treeads.webp",
     topics: ["typescript", "react", "nextjs", "python", "fastapi", "mongodb", "google earth engine"]

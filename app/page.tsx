@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <header className="bg-[url('/starocean.webp')] bg-cover bg-center h-screen min-w-full">
-        <div className="bg-black bg-opacity-40 h-screen min-w-full flex flex-col justify-center items-center">
+        <div id="home" className="bg-black bg-opacity-40 h-screen min-w-full flex flex-col justify-center items-center">
           <h1>Thanos Dimitriades</h1>
           <h2>Software Engineer | Open Source Advocate</h2>
         </div>
