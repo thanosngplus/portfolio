@@ -1,8 +1,7 @@
-export default function Contact() {
+export default function Socials() {
   return (
-    <div id="contact" className="scroll-my-10">
-      <h2>Contact</h2>
-      <p>Reach out to me in the following links:</p>
+    <div id="socials" className="scroll-my-10">
+      <h2>Socials</h2>
       <div className="flex flex-row justify-center items-center mt-10">
         <div>
           <a
