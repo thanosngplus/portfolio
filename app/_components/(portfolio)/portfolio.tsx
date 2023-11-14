@@ -15,6 +15,7 @@ export default async function Portfolio() {
   const projects: Project[] = (await getProjects()).filter((project) =>
     project.topics?.includes("portfolio-project")
   );
+
   const treeads: Project = {
     id: 1,
     name: "treeads",

@@ -2,6 +2,9 @@ import Link from "next/link";
 import { Project } from "@/app/types";
 import Image from "next/image";
 
+const images = ["portfolio"];
+
+
 export default function PortfolioProject({ project }: { project: Project }) {
   let {
     name,
@@ -11,6 +14,11 @@ export default function PortfolioProject({ project }: { project: Project }) {
     description,
     html_url: githubUrl,
   } = project;
+
+  // #TODO needs a better way to handle image (fs?)
+  if (images.includes(name)) {
+    image = `/projects/${name}.webp`;
+  }
 
   topics = topics?.filter((topic) => topic !== "portfolio-project");
   const tagsStyle =
@@ -36,7 +44,7 @@ export default function PortfolioProject({ project }: { project: Project }) {
           />
         </div>
       ) : (
-        <p>No Image Available</p>
+        <div className="w-auto h-52 relative flex justify-center items-center bg-slate-950"><p>No Image Available</p></div>
       )}
       <p>{description}</p>
       <ul className="flex flex-row gap-2 p-2 flex-wrap">
