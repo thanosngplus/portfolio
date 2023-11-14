@@ -27,8 +27,10 @@ export default function PortfolioProject({ project }: { project: Project }) {
     "bg-sky-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded-md";
 
   return (
-    <div className="flex flex-col justify-between gap-4 bg-slate-800 rounded-md border-4 border-white-500">
-      <div className="bg-sky-700 m-0">
+    <div className="flex flex-col justify-between bg-slate-800 rounded-lg border-4 border-white-500">
+      <div>
+
+      <div className="bg-sky-700 flex flex-col justify-start items-center">
         <h3>{name}</h3>
       </div>
       {image !== undefined ? (
@@ -37,15 +39,16 @@ export default function PortfolioProject({ project }: { project: Project }) {
             src={image}
             alt={`Picture of ${name} project`}
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 33vw"
             style={{
-              objectFit: "contain",
+              objectFit: "cover",
             }}
           />
         </div>
       ) : (
         <div className="w-auto h-52 relative flex justify-center items-center bg-slate-950"><p>No Image Available</p></div>
       )}
+      </div>
       <p>{description}</p>
       <ul className="flex flex-row gap-2 p-2 flex-wrap">
         {topics?.map((topic) => (
